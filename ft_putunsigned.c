@@ -6,15 +6,20 @@
 /*   By: majjig <majjig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 03:27:07 by majjig            #+#    #+#             */
-/*   Updated: 2021/11/18 04:14:36 by majjig           ###   ########.fr       */
+/*   Updated: 2021/11/18 22:30:06 by majjig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putunsigned(unsigned int nb, int *count)
+void	ft_putunsigned(unsigned int nb, char base, int *count)
 {
-	if (nb > 10)
-		ft_putunsigned(nb / 10, count);
-	*count += write(1, &"0123456789"[nb % 10],1);
+	if (nb >= BASE)
+		ft_putunsigned(nb / BASE, base, count);
+	if (base == 'x')
+		*count += write(1, &"0123456789abcdef"[nb % BASE], 1);
+	else if (base == 'X')
+		*count += write(1, &"0123456789ABCDEF"[nb % BASE], 1);
+	else
+		*count += write(1, &"0123456789"[nb % BASE], 1);
 }
