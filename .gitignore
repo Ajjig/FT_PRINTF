@@ -1,0 +1,6 @@
+.vscode
+exe
+a.out
+ft_printf.a
+*.o
+main.c
