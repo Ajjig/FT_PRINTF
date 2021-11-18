@@ -5,3 +5,4 @@ ft_printf.a
 *.o
 main.c
 tester
+libftprintf.a
