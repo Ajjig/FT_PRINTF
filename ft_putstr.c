@@ -6,7 +6,7 @@
 /*   By: majjig <majjig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 17:27:23 by majjig            #+#    #+#             */
-/*   Updated: 2021/11/18 03:55:39 by majjig           ###   ########.fr       */
+/*   Updated: 2021/11/18 21:14:07 by majjig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_putstr(char *str, int *count)
 {
-	while (*str)
-		count += write(1, str++, 1);
+	if (!str)
+		*count += write(1, "(null)", 6);
+	else
+		while (*str)
+			*count += write(1, str++, 1);
 }
