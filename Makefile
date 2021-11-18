@@ -14,13 +14,13 @@ CC = gcc
 
 CFLAGS = -c -Wextra -Werror -Wall
 
-NAME = ft_printf
+NAME = ft_printf.a
 
 SRCS = ft_printf.c \
 	ft_putnbr.c \
 	ft_putad.c \
 	ft_putstr.c \
-	ft_putunsiged.c \
+	ft_putunsigned.c \
 
 OBJS = ${SRCS:.c=.o}
 
