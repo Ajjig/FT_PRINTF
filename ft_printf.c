@@ -6,7 +6,7 @@
 /*   By: majjig <majjig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:49:22 by majjig            #+#    #+#             */
-/*   Updated: 2021/11/18 04:04:36 by majjig           ###   ########.fr       */
+/*   Updated: 2021/11/18 04:05:48 by majjig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_printf(const char *s, ...)
 		if (s[i] == '%')
 		{
 			if (s[++i] == 'c')
-				write(1, va_arg(ap, char *), 1);
+				count += write(1, va_arg(ap, char *), 1);
 			else if (s[i] == 's')
 				ft_putstr(va_arg(ap, char *), &count);
 			else if (s[i] == 'x' || s[i] == 'X' || s[i] == 'd' || s[i] == 'i')
