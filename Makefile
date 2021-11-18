@@ -6,7 +6,7 @@
 #    By: majjig <majjig@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/17 17:30:09 by majjig            #+#    #+#              #
-#    Updated: 2021/11/18 19:43:55 by majjig           ###   ########.fr        #
+#    Updated: 2021/11/18 23:09:01 by majjig           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRCS = ft_printf.c \
 	ft_putad.c \
 	ft_putstr.c \
 	ft_putunsigned.c \
+	ft_putchar.c
 
 OBJS = ${SRCS:.c=.o}
 
