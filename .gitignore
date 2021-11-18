@@ -6,3 +6,4 @@ ft_printf.a
 main.c
 tester
 libftprintf.a
+exe.dSYM
