@@ -6,7 +6,7 @@
 /*   By: majjig <majjig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:49:22 by majjig            #+#    #+#             */
-/*   Updated: 2021/11/18 21:42:15 by majjig           ###   ########.fr       */
+/*   Updated: 2021/11/18 22:09:24 by majjig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ int	ft_printf(const char *s, ...)
 			}
 			else if (s[i] == 's')
 				ft_putstr(va_arg(ap, char *), &count);
-			else if (s[i] == 'x' || s[i] == 'X' || s[i] == 'd' || s[i] == 'i')
-				ft_putnbr(va_arg(ap, int), s[i], &count);
+			else if (s[i] == 'i' || s[i] == 'd')
+				ft_putnbr(va_arg(ap, int), &count);
 			else if (s[i] == 'u')
 				ft_putunsigned(va_arg(ap, unsigned int), &count);
 			else if (s[i] == 'p')
