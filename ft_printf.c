@@ -6,7 +6,7 @@
 /*   By: majjig <majjig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:49:22 by majjig            #+#    #+#             */
-/*   Updated: 2021/11/18 23:08:29 by majjig           ###   ########.fr       */
+/*   Updated: 2021/11/18 23:35:17 by majjig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,11 @@ int	ft_printf(const char *s, ...)
 				ft_putunsigned(va_arg(ap, unsigned int), s[i], &count);
 			else if (s[i] == 'p')
 				ft_putad(va_arg(ap, unsigned long int), &count);
+			else
+				count += write(1, s + i, 1);
 		}
 		else
-			count += write(1, s + i, 1);
+				count += write(1, s + i, 1);
 	}
 	return (va_end(ap), count);
 }
