@@ -6,15 +6,19 @@
 /*   By: majjig <majjig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 23:34:59 by majjig            #+#    #+#             */
-/*   Updated: 2021/11/18 21:18:44 by majjig           ###   ########.fr       */
+/*   Updated: 2021/11/18 21:26:19 by majjig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-
 void	ft_putnbr(int nb, char base, int *count)
 {
+	if (nb == -2147483648)
+	{
+		*count += write(1, "-2147483648", 11);
+		return ;
+	}
 	if (nb < 0)
 	{
 		*count += write(1, "-", 1);
