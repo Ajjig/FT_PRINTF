@@ -6,7 +6,7 @@
 /*   By: majjig <majjig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:49:22 by majjig            #+#    #+#             */
-/*   Updated: 2021/11/18 03:57:23 by majjig           ###   ########.fr       */
+/*   Updated: 2021/11/18 04:04:36 by majjig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	ft_printf(const char *s, ...)
 	int		count;
 
 	count = 0;
-	i = 0;
+	i = -1;
 	va_start(ap, s);
-	while (s[i])
+	while (s[++i])
 	{
 		if (s[i] == '%')
 		{
@@ -35,11 +35,9 @@ int	ft_printf(const char *s, ...)
 				ft_putnbr(va_arg(ap, int), 'x', &count);
 			else if (s[i] == 'u')
 				ft_putunsigned(va_arg(ap, unsigned int), &count);
-			else
-				count += write(1, &s[i], 1);
 		}
-		i++;
-		count += write(1, s + i++, 1);
+		else
+			count += write(1, s + i, 1);
 	}
 	return (count);
 }
