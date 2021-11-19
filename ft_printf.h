@@ -6,7 +6,7 @@
 /*   By: majjig <majjig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 22:04:03 by majjig            #+#    #+#             */
-/*   Updated: 2021/11/18 23:35:05 by majjig           ###   ########.fr       */
+/*   Updated: 2021/11/19 01:33:15 by majjig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ void	ft_putchar(char c, int *count);
 
 /* MACROS */
 
-# define BASE ((base == 'X' || base == 'x') ? 16 : 10)
+# define BASE ((base == 'u') ? 10 : 16)
 
 #endif
