@@ -6,7 +6,7 @@
 /*   By: majjig <majjig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:49:22 by majjig            #+#    #+#             */
-/*   Updated: 2021/11/18 23:56:57 by majjig           ###   ########.fr       */
+/*   Updated: 2021/11/19 00:07:00 by majjig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_format_detect(char flag, va_list ap, int *count)
 {
 	if (flag == 'c')
-			ft_putchar(va_arg(ap, int), count);
+		ft_putchar(va_arg(ap, int), count);
 	else if (flag == 's')
 		ft_putstr(va_arg(ap, char *), count);
 	else if (flag == 'i' || flag == 'd')
