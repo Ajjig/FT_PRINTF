@@ -6,7 +6,7 @@
 /*   By: majjig <majjig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:49:22 by majjig            #+#    #+#             */
-/*   Updated: 2021/11/20 04:02:50 by majjig           ###   ########.fr       */
+/*   Updated: 2021/11/20 05:39:55 by majjig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,8 @@ int	ft_printf(const char *s, ...)
 
 	count = 0;
 	i = -1;
+	if (s == NULL)
+		return (-1);
 	va_start(ap, s);
 	while (s[++i])
 	{
