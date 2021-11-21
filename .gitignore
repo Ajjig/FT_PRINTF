@@ -7,3 +7,4 @@ main.c
 tester
 libftprintf.a
 exe.dSYM
+.DS_Store
