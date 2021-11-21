@@ -6,7 +6,7 @@
 /*   By: majjig <majjig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:49:22 by majjig            #+#    #+#             */
-/*   Updated: 2021/11/21 05:50:56 by majjig           ###   ########.fr       */
+/*   Updated: 2021/11/21 22:27:41 by majjig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_space_flag(va_list ap, const char *s, int *count)
 	i = 0;
 	nb = 0;
 	while (ft_strchr("ids", s[++i]) == 0)
-		nb += s[i] - 48 + (nb * 10);
+		nb = s[i] - 48 + (nb * 10);
 	if (s[i] == 's')
 	{
 		str = va_arg(ap, char *);
