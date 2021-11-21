@@ -6,7 +6,7 @@
 #    By: majjig <majjig@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/17 17:30:09 by majjig            #+#    #+#              #
-#    Updated: 2021/11/21 21:59:49 by majjig           ###   ########.fr        #
+#    Updated: 2021/11/21 22:42:01 by majjig           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,8 +53,8 @@ fclean: clean
 
 re: fclean all
 
-bonus: $(OBJBNS) $(INC)
+bonus: $(BNSLIB)
+
+bnslib: $(OBJBNS) $(INC)
 	@$(CC) $(CFLAGS) $(BNS)
 	@ar rc $(NAME) $(OBJBNS)
-
-
