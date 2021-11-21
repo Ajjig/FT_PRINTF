@@ -6,7 +6,7 @@
 #    By: majjig <majjig@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/17 17:30:09 by majjig            #+#    #+#              #
-#    Updated: 2021/11/20 03:33:46 by majjig           ###   ########.fr        #
+#    Updated: 2021/11/21 05:33:38 by majjig           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,20 +24,37 @@ SRCS = ft_printf.c \
 	ft_putchar.c \
 	ft_strlen.c
 
+BNS = ft_printf_bonus.c \
+	ft_putnbr.c \
+	ft_putad.c \
+	ft_putstr.c \
+	ft_putunsigned.c \
+	ft_putchar.c \
+	ft_strlen.c \
+	ft_intlen.c
+
+INC = ft_printf.h
+
 OBJS = ${SRCS:.c=.o}
+
+OBJBNS = ${BNS:.c=.o}
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(SRCS)
-	ar rc $(NAME) $(OBJS)
+$(NAME): $(OBJS) $(INC)
+	@$(CC) $(CFLAGS) $(SRCS)
+	@ar rc $(NAME) $(OBJS)
 
 clean:
-	rm -rf *.o
+	@rm -f $(OBJS) $(OBJBNS)
 
 fclean: clean
-	rm -rf $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 
-bonus: all
+bonus: $(OBJBNS) $(INC)
+	@$(CC) $(CFLAGS) $(BNS)
+	@ar rc $(NAME) $(OBJBNS)
+
+
