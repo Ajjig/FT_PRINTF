@@ -6,7 +6,7 @@
 /*   By: majjig <majjig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 22:04:03 by majjig            #+#    #+#             */
-/*   Updated: 2021/11/20 03:29:18 by majjig           ###   ########.fr       */
+/*   Updated: 2021/11/21 05:24:26 by majjig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	ft_putunsigned(unsigned int nb, char base, int *count);
 void	ft_putad(unsigned long int nb, int *count);
 void	ft_putchar(char c, int *count);
 int		ft_strlen(char *str);
+int		ft_intlen(int nb);
 
 /* MACROS */
 
