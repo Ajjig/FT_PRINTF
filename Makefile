@@ -6,7 +6,7 @@
 #    By: majjig <majjig@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/17 17:30:09 by majjig            #+#    #+#              #
-#    Updated: 2021/11/22 02:01:01 by majjig           ###   ########.fr        #
+#    Updated: 2021/11/22 02:22:05 by majjig           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,8 @@ BNS = ft_printf_bonus.c \
 	ft_intlen.c
 
 to-rm-files = ft_printf.o
-to-rm-bonus = ft_printf_bonus.o ft_intlen.o
+to-rm-bonus = ft_printf_bonus.o \
+			ft_intlen.o
 
 INC = ft_printf.h
 
@@ -55,7 +56,7 @@ fclean: clean
 	@rm -f $(NAME)
 
 rm-bonus:
-	-@ar dv $(to-rm-bonus)
+	-@ar dv $(NAME) $(to-rm-bonus)
 
 re: fclean all
 
@@ -70,4 +71,4 @@ bnslib: rm-mandatory $(OBJBNS) $(INC)
 rm-mandatory:
 	-@ar dv $(NAME) $(to-rm-files)
 
-.PHONY: bonus all clean fclean re re-bonus
+.PHONY: bonus all clean fclean re re-bonus rm-bonus rm-mandatory
