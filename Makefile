@@ -6,7 +6,7 @@
 #    By: majjig <majjig@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/17 17:30:09 by majjig            #+#    #+#              #
-#    Updated: 2021/11/22 02:22:05 by majjig           ###   ########.fr        #
+#    Updated: 2021/11/22 02:25:45 by majjig           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ all: $(NAME)
 
 $(NAME): rm-bonus $(OBJS) $(INC)
 	@$(CC) $(CFLAGS) $(SRCS)
-	@ar rc $(NAME) $(OBJS)
+	@ar rc $@ $(OBJS)
 
 clean:
 	@rm -f $(OBJS) $(OBJBNS)
