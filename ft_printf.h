@@ -6,7 +6,7 @@
 /*   By: majjig <majjig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 22:04:03 by majjig            #+#    #+#             */
-/*   Updated: 2021/11/24 20:26:23 by majjig           ###   ########.fr       */
+/*   Updated: 2021/11/24 20:29:47 by majjig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,6 @@ int		ft_intlen(int nb);
 # define STR_HEXA_LOWER "0123456789abcdef"
 # define STR_HEXA_UPPER "0123456789ABCDEF"
 # define STR_DECIMAL "0123456789"
+# define WRITE_NULL
 
 #endif
